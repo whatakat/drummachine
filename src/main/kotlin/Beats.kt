@@ -1,9 +1,7 @@
 import java.io.File
 import javax.sound.sampled.AudioSystem
 
-class Beats {
-
-    fun playBeats(beats: String, file: String){
+   fun playBeats(beats: String, file: String){
         val parts = beats.split("x")
         var count = 0
         for (part in parts){
@@ -28,4 +26,9 @@ class Beats {
         clip.open(audioInputStream)
         clip.start()
     }
+
+
+fun main(){
+    playBeats("x-x-x-x-x-x-","toms.aiff")
+    playBeats("x-----x-----","crash_cymbal.aiff")
 }
