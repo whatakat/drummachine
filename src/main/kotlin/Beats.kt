@@ -1,5 +1,6 @@
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.io.File
 import javax.sound.sampled.AudioSystem
 
@@ -31,6 +32,6 @@ import javax.sound.sampled.AudioSystem
 
 
 fun main(){
-    GlobalScope.launch {  playBeats("x-x-x-x-x-x-","toms.aiff")}
-    playBeats("x-----x-----","crash_cymbal.aiff")
+    runBlocking {launch {  playBeats("x-x-x-x-x-x-","toms.aiff")}
+        playBeats("x-----x-----","crash_cymbal.aiff")  }
 }
